@@ -1,0 +1,37 @@
+#colophon .site-info{
+  margin: 0;
+  padding: 12px 15px 24px;
+  @include screen(medium){
+    padding: 25px 15px 30px;
+  }
+  a{
+    color: #141415;
+    opacity: 1 !important;
+    &:hover{
+      color: #141415 !important;
+    }
+  }
+}
+.social-navigation{
+  text-align: center;
+  ul.social-links-menu {
+    &:hover{
+      a {
+        color: #AEAEAE !important;
+      }
+    }
+    li a {
+      padding: 5px;
+      color: #ccc;
+      border: none !important;
+      svg {
+        width: 34px;
+        height: 34px;
+        @include screen(medium){
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

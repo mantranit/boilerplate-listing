@@ -1,0 +1,52 @@
+/* By M Team */
+
+/* Core variables */
+@import 'base/vars';
+
+/* CSS Reset */
+@import 'base/reset';
+
+/* CSS print */
+@import 'base/print';
+
+/* Fonts */
+@import 'base/fonts';
+
+/* Mixins, helpers and functions */
+@import 'base/mixins';
+
+/* Vendor */
+
+/* Layout */
+body {
+  font-family: $font-source-sans-pro;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #454545;
+  letter-spacing: .03em;
+  &.fixed{
+    position: fixed;
+    overflow: hidden;
+  }
+  @include screen(medium){
+    position: static !important;
+    overflow: visible !important;
+  }
+}
+
+.site-content{
+  padding-top: 56px;
+  min-height: calc(100vh - 90px);
+  @include screen(medium){
+    padding-top: 0;
+    min-height: calc(100vh - 174px - 115px);
+  }
+}
+
+/* Components */
+@import "layout/header";
+@import "layout/footer";
+
+/* Demo styles */
+@import "sections/demo";
+@import "sections/content";
