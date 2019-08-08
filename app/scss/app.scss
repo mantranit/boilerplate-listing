@@ -34,6 +34,24 @@ body {
   }
 }
 
+a,
+button,
+.button.alt,
+input,
+textarea,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="search"]{
+  &:focus {
+    outline: none !important;
+  }
+}
+
 .site-content{
   padding-top: 56px;
   min-height: calc(100vh - 90px);

@@ -23,8 +23,10 @@ dist/
 wordpress/wp-content/themes/fujielevator/assets/
 wordpress/wp-content/themes/fujielevator/*.html
 wordpress/wp-content/themes/fujielevator/*.png
+wordpress/wp-content/themes/twentynineteen/
 yarn.lock
 
 app/images/category
 app/images/design*
 app/images/FJJ*
+wc-logs/

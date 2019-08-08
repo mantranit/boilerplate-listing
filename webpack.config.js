@@ -130,6 +130,11 @@ const config = {
         from: path.resolve(__dirname, 'app', 'images', 'screenshot.png'),
         to: path.resolve(__dirname, 'wordpress/wp-content/themes/fujielevator', 'screenshot.png'),
       },
+      {
+        from: path.resolve(__dirname, 'app', 'js', 'library'),
+        to: path.resolve(__dirname, 'wordpress/wp-content/themes/fujielevator', 'assets', 'js', 'library'),
+        toType: 'dir',
+      },
     ]),
   ].concat(htmlPage.map(html => new HtmlWebpackPlugin({
     inject: true,
