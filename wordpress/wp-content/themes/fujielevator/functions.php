@@ -18,6 +18,7 @@ function fujielevator_assets() {
     wp_enqueue_style('fujielevator-style', get_stylesheet_uri());
 
     wp_deregister_script('jquery');
+    wp_deregister_script('jquery');
     wp_enqueue_script(
         'jquery',
         get_stylesheet_directory_uri() . '/assets/js/library/jquery.min.js',
@@ -36,3 +37,11 @@ function fujielevator_assets() {
 
 }
 add_action('wp_enqueue_scripts', 'fujielevator_assets');
+
+/* TODO: override parent functions */
+//function storefront_product_search() {}
+function storefront_header_cart() {}
+function storefront_primary_navigation_wrapper() {}
+function storefront_primary_navigation_wrapper_close() {}
+function storefront_handheld_footer_bar() {}
+function storefront_product_search() {}
