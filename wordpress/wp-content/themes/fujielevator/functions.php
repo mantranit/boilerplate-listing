@@ -5,8 +5,17 @@
  * Date: 8/8/19
  * Time: 11:26 AM
  */
+
+add_action('wp_enqueue_scripts', 'fujielevator_assets');
 function fujielevator_assets() {
 
+    // TODO: remove when finish style and inject app.css to style.css
+    wp_dequeue_style('storefront-style');
+    wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css' );
+    wp_dequeue_style('storefront-icons');
+    wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/css/base/icons.css', '', wp_get_theme()->get( 'Version' ) );
+    wp_dequeue_style('storefront-woocommerce-style');
+    wp_enqueue_style( 'storefront-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce/woocommerce.css', array(), wp_get_theme()->get( 'Version' ) );
     // enqueue style
     wp_enqueue_style(
         'fujielevator-style-custom',
@@ -15,7 +24,6 @@ function fujielevator_assets() {
 //        wp_get_theme()->get( 'Version' )
         rand(1000, 2000)
     );
-    wp_enqueue_style('fujielevator-style', get_stylesheet_uri());
 
     wp_deregister_script('jquery');
     wp_deregister_script('jquery');
@@ -36,14 +44,22 @@ function fujielevator_assets() {
     );
 
 }
-add_action('wp_enqueue_scripts', 'fujielevator_assets');
 
 /* override parent functions */
 function storefront_header_cart() {}
 function storefront_primary_navigation_wrapper() {}
 function storefront_primary_navigation_wrapper_close() {}
 function storefront_handheld_footer_bar() {}
-
+function storefront_credit() {
+    ?>
+    <div class="site-info">
+        <div class="links">
+        <?php echo get_the_privacy_policy_link(); ?>
+        </div>
+        <?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; 2019. ' . get_bloginfo( 'name' ) ) ); ?>
+    </div><!-- .site-info -->
+    <?php
+}
 
 function storefront_product_search() {
     if ( storefront_is_woocommerce_activated() ) {
