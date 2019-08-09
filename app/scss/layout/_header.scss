@@ -6,6 +6,7 @@
   @include screen(large){
     margin-left: auto !important;
     margin-right: auto !important;
+    position: relative;
   }
 }
 .site-header{
@@ -127,15 +128,19 @@
   @include screen(medium){
     margin-top: -6px !important;
     display: block;
+    padding-right: 30px;
+  }
+  @include screen(large){
+    padding-right: 40px;
   }
   .menu a {
     text-transform: uppercase;
     transition: all 0.2s;
     @include screen(medium){
-      padding: 1.8rem 0.6rem !important;
+      padding: 1.8rem 0.5rem !important;
     }
     @include screen(large){
-      padding: 2.2rem 0.6rem !important;
+      padding: 2.2rem 0.8rem !important;
     }
   }
   .sub-menu {
@@ -165,9 +170,6 @@
   margin-bottom: 0 !important;
   margin-right: 0 !important;
 }
-.woocommerce-active .site-header .site-search{
-  margin-bottom: 0 !important;
-}
 
 .handheld-navigation{
   transition: none !important;
@@ -182,13 +184,6 @@
   padding: 20px !important;
 }
 
-.woocommerce-active .site-header .site-search{
-  display: none !important;
-  @include screen(large){
-    display: block !important;
-    margin-top: 8px;
-  }
-}
 .site-search .widget_product_search form input[type=search]{
   border-radius: 50px;
 }
@@ -208,3 +203,93 @@
     display: block !important;
   }
 }
+
+.site-search .widget_product_search form {
+  margin: 0;
+  &:before {
+    top: 12px !important;
+    left: 12px !important;
+  }
+}
+.woocommerce-active .site-header {
+  .site-search {
+    display: none !important;
+    margin-bottom: 0 !important;
+    float: right !important;
+    width: 100% !important;
+    margin-top: 15px;
+    @include screen(small) {
+      display: block !important;
+      width: 300px !important;
+      margin-top: 0;
+      margin-right: 50px !important;
+    }
+    @include screen(medium) {
+      display: none !important;
+      position: absolute;
+      right: -15px;
+      top: 100%;
+      padding: 20px 30px;
+      background-color: #fff;
+      box-shadow: 0 3px 5px rgba(#ccc, 0.5);
+      border-radius: 0 0 3px 3px;
+    }
+    input[type=text],
+    input[type=search] {
+      padding: 10px 10px 10px 34px;
+      border-radius: 100px;
+    }
+  }
+
+  #toggleSearchBar{
+    position: absolute;
+    visibility: hidden;
+    &:checked{
+      ~ .site-search{
+        display: block !important;
+      }
+    }
+  }
+  .toggleSearchBar-label{
+    position: absolute;
+    right: 50px;
+    top: 18px;
+    z-index: 10;
+    background: white;
+    margin: 0;
+    padding: 5px 12px;
+    cursor: pointer;
+    @include screen(small) {
+      display: none;
+    }
+    @include screen(medium){
+      right: 0;
+      top: 25px;
+      display: block;
+    }
+    @include screen(large){
+      right: -10px;
+      top: 17px;
+      display: block;
+    }
+    &:before{
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      line-height: 1;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      line-height: inherit;
+      vertical-align: baseline;
+      content: "\f002";
+      font-size: 1.3rem;
+      line-height: 1;
+      //color: #2B4D9B;
+      color: #333;
+    }
+  }
+}
+
