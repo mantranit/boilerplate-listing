@@ -1,0 +1,55 @@
+/* start block-hero */
+.block-hero{
+  margin: 0 calc(50% - 50vw);
+  min-height: 500px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  @include screen(small, false){
+    min-height: 0;
+    background-image: none !important;
+  }
+  figure{
+    display: block;
+    @include screen(small){
+      display: none;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &__intro{
+    padding: 15px;
+    p{
+      margin: 0;
+    }
+    @include screen(small){
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 10%;
+      padding: 15px;
+    }
+    @include screen(large){
+      bottom: 10%;
+    }
+    &__inner{
+      @include screen(small) {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 15px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      @include screen(medium){
+        font-size: 20px;
+      }
+      @include screen(large) {
+        font-size: 26px;
+      }
+    }
+  }
+}
+/* end block-hero */
