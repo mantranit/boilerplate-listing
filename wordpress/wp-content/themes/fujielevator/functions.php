@@ -86,4 +86,3 @@ function woo_custom_product_searchform( $form ) {
     return $form;
 
 }
-
