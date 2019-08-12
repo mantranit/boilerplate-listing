@@ -231,7 +231,7 @@ button.menu-toggle {
     margin-top: 15px;
     @include screen(small) {
       display: block;
-      width: 300px;
+      width: 320px;
       margin-top: 0;
       margin-right: 50px;
     }
@@ -244,6 +244,7 @@ button.menu-toggle {
       background-color: #fff;
       box-shadow: 0 3px 5px rgba(#ccc, 0.5);
       border-radius: 0 0 3px 3px;
+      margin-right: 0;
     }
     input[type=text],
     input[type=search] {

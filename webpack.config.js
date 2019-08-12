@@ -26,7 +26,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(scss|php)$/,
+        test: /\.(scss|css)$/,
         use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {

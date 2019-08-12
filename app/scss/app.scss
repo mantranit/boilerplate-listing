@@ -53,18 +53,24 @@ input[type="search"]{
 }
 
 .site-content{
-  padding-top: 56px;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 71px - 77px);
   @include screen(medium){
-    padding-top: 0;
-    min-height: calc(100vh - 174px - 115px);
+    min-height: calc(100vh - 83px - 77px);
+  }
+  @include screen(large){
+    min-height: calc(100vh - 96px - 77px);
   }
 }
-
+.site-main{
+  margin-bottom: 0;
+}
+img{
+  border-radius: 0;
+}
 /* Components */
 @import "layout/header";
 @import "layout/footer";
 
 /* Demo styles */
-@import "sections/demo";
-@import "sections/content";
+@import "pages/home";
+@import "pages/quality";
