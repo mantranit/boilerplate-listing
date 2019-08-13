@@ -1,3 +1,7 @@
+.home.page-template-template-fullwidth .hentry{
+  max-width: 996px;
+  margin: 0 auto;
+}
 ul.products {
   padding: 20px 0 0;
   li.product {
@@ -32,8 +36,22 @@ ul.products {
 .hentry .entry-content .wp-block-gallery .blocks-gallery-item,
 .editor-styles-wrapper .wp-block-gallery .blocks-gallery-image,
 .editor-styles-wrapper .wp-block-gallery .blocks-gallery-item{
-  width: auto;
+  width: 100%;
   margin: 0;
+  figcaption{
+    background-color: rgba(0,0,0,0.7);
+    padding: 5px 10px;
+    font-weight: 600;
+    text-align: left;
+    font-size: 12px;
+    @include screen(medium){
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  &:nth-child(odd) figcaption{
+    text-align: right;
+  }
 }
 .home-carousel {
   .slick-next,
@@ -58,4 +76,51 @@ ul.products {
 }
 .count{
   display: none;
+}
+
+.page-template-template-fullwidth-php .content-area,
+.page-template-template-homepage-php .content-area{
+  margin-bottom: 0;
+}
+.hentry{
+  margin-bottom: 0;
+}
+.title{
+  border-bottom: 2px solid #bbb;
+  padding-bottom: 10px;
+  margin: 0;
+  a{
+    float: right;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 15px;
+    display: block;
+    background-color: #2b4d9b;
+    border: 1px solid #2b4d9b;
+    color: white;
+    margin-top: 5px;
+    &:hover{
+      background-color: #fff;
+    }
+  }
+}
+.hentry .entry-content .wp-block-latest-posts.has-dates li,
+.editor-styles-wrapper .wp-block-latest-posts.has-dates li{
+  border-bottom: 1px dotted #bbb;
+  margin: 0;
+  @include clearfix;
+  time{
+    margin: 10px 0;
+    color: black;
+    font-weight: 600;
+    float: left;
+    width: 90px;
+  }
+  a{
+    display: inline-block;
+    padding: 10px;
+    font-size: 14px;
+    float: right;
+    width: calc(100% - 96px);
+  }
 }
