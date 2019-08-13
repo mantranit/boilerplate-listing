@@ -53,7 +53,7 @@
             font-size: 20px; } }
     @media screen and (min-width: 1280px) {
         .block-hero__intro__inner {
-            font-size: 26px; } }
+            font-size: 22px; } }
 
     /* end block-hero */
 </style>

@@ -22,7 +22,7 @@
 
 <?php do_action( 'storefront_before_site' ); ?>
 
-<div id="page" class="hfeed site" data-module="HomeCarousel">
+<div id="page" class="hfeed site" data-module="HomeCarousel,ProjectSlider">
 	<?php do_action( 'storefront_before_header' ); ?>
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
