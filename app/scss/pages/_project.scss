@@ -1,0 +1,18 @@
+.hentry .entry-content .wp-block-cover.hero-project,
+.editor-styles-wrapper .wp-block-cover.hero-project{
+  min-height: 200px !important;
+  @include screen(small){
+    min-height: 340px !important;
+  }
+  .wp-block-cover__inner-container{
+    background: none;
+    max-width: none;
+    position: static;
+    width: 100%;
+    margin-top: 0 !important;
+    h2{
+      max-width: 1250px;
+      color: white;
+    }
+  }
+}

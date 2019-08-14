@@ -1,0 +1,21 @@
+.hentry .entry-content .wp-block-cover.hero-contact,
+.editor-styles-wrapper .wp-block-cover.hero-contact{
+  min-height: 200px !important;
+  background-size: auto 90% !important;
+  background-position: center 50% !important;
+  background-repeat: no-repeat;
+  @include screen(small){
+    min-height: 340px !important;
+  }
+  .wp-block-cover__inner-container{
+    background: none;
+    max-width: none;
+    position: static;
+    width: 100%;
+    margin-top: 0 !important;
+    h2{
+      max-width: 1250px;
+      text-shadow: 0 0 5px white;
+    }
+  }
+}
