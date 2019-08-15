@@ -1,0 +1,107 @@
+.single-post{
+  .entry-header{
+    padding-top: 15px;
+    border-bottom: none;
+    margin-bottom: 0;
+    @include screen(medium){
+      padding-top: 30px;
+    }
+  }
+  .entry-date{
+    font-weight: 700;
+  }
+  h1{
+    margin: 0 0 30px;
+    font-size: 23px;
+    @include screen(medium){
+      font-size: 30px;
+    }
+  }
+}
+
+.site-main nav.navigation .nav-previous,
+.site-main nav.navigation .nav-next{
+  @include screen(medium){
+    width: 40%;
+  }
+  a{
+    line-height: 1.2;
+    font-size: 0.9em;
+  }
+}
+.site-main nav.navigation .nav-next a{
+  //display: none;
+  position: relative;
+  padding-right: 17px;
+  &:after {
+    font-size: 0;
+    width: 7px;
+    height: 20px;
+    background: url(../images/global/navi_next.png) no-repeat center center;
+    background-size: 7px auto;
+
+    position: absolute;
+    right: 0;
+  }
+}
+.site-main nav.navigation .nav-previous a {
+  position: relative;
+  padding-left: 17px;
+  &:before {
+    font-size: 0;
+    width: 7px;
+    height: 20px;
+    background: url(../images/global/navi_prev.png) no-repeat center center;
+    background-size: 7px auto;
+
+    position: absolute;
+    left: 0;
+  }
+}
+#comments{
+  display: none;
+}
+.hentry .entry-content .wp-block-file,
+.editor-styles-wrapper .wp-block-file{
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @include screen(medium){
+    padding: 15px 20px;
+  }
+  &:hover{
+    background-color: #f1f1f1;
+  }
+  a:first-child{
+    &:after{
+      content: '';
+      width: 15px;
+      height: 18px;
+      display: inline-block;
+      margin-left: 5px;
+      transform: translateY(3px);
+      background: url(../images/global/icon_pdf.png) no-repeat center center;
+      background-size: 15px auto;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+  .wp-block-file__button{
+    background: none;
+    float: left;
+    color: #333;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+  }
+}

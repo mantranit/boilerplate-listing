@@ -34,6 +34,48 @@ function storefront_product_search() {
     }
 }
 
+function storefront_post_meta() {
+    if ( 'post' !== get_post_type() ) {
+        return;
+    }
+
+    // Posted on.
+    $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+    $time_string = sprintf(
+        $time_string,
+        esc_attr( get_the_date( 'c' ) ),
+        esc_html( get_the_date() ),
+        esc_attr( get_the_modified_date( 'c' ) ),
+        esc_html( get_the_modified_date() )
+    );
+
+    $output_time_string = sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>', esc_url( get_permalink() ), $time_string );
+
+    echo wp_kses(
+        sprintf( '%1$s', $output_time_string ), array(
+            'span' => array(
+                'class' => array(),
+            ),
+            'time' => array(
+                'datetime' => array(),
+                'class'    => array(),
+            ),
+        )
+    );
+}
+
+function storefront_post_taxonomy() {}
+
+function storefront_post_nav() {
+    $args = array(
+        'next_text' => 'next',
+        'prev_text' => 'back',
+    );
+    the_post_navigation( $args );
+}
+/* end override parent functions */
+
 add_filter( 'get_product_search_form' , 'woo_custom_product_searchform' );
 function woo_custom_product_searchform( $form ) {
 

@@ -1,6 +1,9 @@
 .storefront-breadcrumb{
   display: none;
 }
+.storefront-sorting{
+  margin: 0;
+}
 .woocommerce-products-header + .storefront-sorting{
   display: none;
 }
@@ -10,7 +13,12 @@
 .woocommerce-result-count{
   display: none;
 }
-
+.woocommerce-info,
+.woocommerce-noreviews,
+p.no-comments{
+  margin-bottom: 0;
+  margin-top: 30px;
+}
 .woocommerce-products-header__title{
   font-size: 26px;
   padding: 15px 0 5px;
@@ -26,9 +34,10 @@
 .woocommerce-pagination{
   float: none;
   margin-top: 15px;
+  margin-bottom: 30px;
   @include screen(medium){
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   }
 }
 .right-sidebar .content-area{
