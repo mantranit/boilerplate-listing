@@ -135,22 +135,30 @@
     width: 50px;
     height: 50px;
     z-index: 1;
-    &:before{
-      display: none;
+    @include screen(large) {
+      &:before {
+        display: none;
+      }
     }
   }
   .slick-next{
-    background-image: url(../images/global/navi_next.png);
-    right: -50px;
-    &:hover, &:focus{
+    right: 0px;
+    @include screen(large) {
       background-image: url(../images/global/navi_next.png);
+      right: -50px;
+      &:hover, &:focus{
+        background-image: url(../images/global/navi_next.png);
+      }
     }
   }
   .slick-prev{
-    background-image: url(../images/global/navi_prev.png);
-    left: -50px;
-    &:hover, &:focus{
+    left: 0px;
+    @include screen(large) {
       background-image: url(../images/global/navi_prev.png);
+      left: -50px;
+      &:hover, &:focus{
+        background-image: url(../images/global/navi_prev.png);
+      }
     }
   }
 }
