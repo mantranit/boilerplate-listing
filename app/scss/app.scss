@@ -20,13 +20,16 @@
 /* Layout */
 body {
   font-family: $font-source-sans-pro;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5;
-  color: #454545;
+  color: #111;
   letter-spacing: .03em;
   &.fixed{
     position: fixed;
     overflow: hidden;
+  }
+  @include screen(small, false){
+    font-size: 16px;
   }
   @include screen(medium){
     position: static !important;
@@ -82,12 +85,85 @@ h1, h2, h3, h4, h5, h6{
     color: #2b4d9b;
   }
 }
-
+h2{
+  @include screen(small, false){
+    font-size: 26px;
+    line-height: 1.2;
+  }
+}
+h3{
+  @include screen(small, false){
+    font-size: 23px;
+    line-height: 1.2;
+  }
+}
+h4{
+  @include screen(small, false){
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+.title{
+  border-bottom: 2px solid #bbb;
+  padding-bottom: 10px;
+  margin: 0;
+  &-table{
+    font-size: 18px;
+    @include screen(medium){
+      font-size: 20px;
+    }
+  }
+  &-grey{
+    background-color: #f1f1f1;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    font-weight: 600;
+    margin-bottom: 20px;
+    @include screen(medium){
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+  &-ceo{
+    border-bottom: 1px solid #D01126;
+    margin-bottom: 20px;
+    @include screen(medium){
+      margin-bottom: 30px;
+    }
+  }
+  &-history{
+    border-bottom: 1px solid #D01126;
+    margin-bottom: 10px;
+  }
+  &.no-border{
+    border-bottom: none;
+  }
+  a{
+    float: right;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 15px;
+    display: block;
+    background-color: #2b4d9b;
+    border: 1px solid #2b4d9b;
+    color: white;
+    margin-top: 5px;
+    transition: all 0.2s;
+    &:hover{
+      background-color: #fff;
+    }
+  }
+}
 /* Components */
 @import "layout/header";
 @import "layout/footer";
 
-/* Demo styles */
+/* Block */
+@import "blocks/block_hero";
+@import "blocks/block_history";
+
+/* Page styles */
 @import "pages/home";
 @import "pages/quality";
 @import "pages/performance";

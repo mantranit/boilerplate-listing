@@ -88,47 +88,7 @@ ul.products {
 .hentry{
   margin-bottom: 0;
 }
-.title{
-  border-bottom: 2px solid #bbb;
-  padding-bottom: 10px;
-  margin: 0;
-  &-table{
-    font-size: 18px;
-    @include screen(medium){
-      font-size: 20px;
-    }
-  }
-  &-grey{
-    background-color: #f1f1f1;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
-    font-weight: 600;
-    margin-bottom: 20px;
-    @include screen(medium){
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-  }
-  &.no-border{
-    border-bottom: none;
-  }
-  a{
-    float: right;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 7px 15px;
-    display: block;
-    background-color: #2b4d9b;
-    border: 1px solid #2b4d9b;
-    color: white;
-    margin-top: 5px;
-    transition: all 0.2s;
-    &:hover{
-      background-color: #fff;
-    }
-  }
-}
+
 .hentry .entry-content .wp-block-latest-posts.has-dates li,
 .editor-styles-wrapper .wp-block-latest-posts.has-dates li{
   border-bottom: 1px dotted #bbb;

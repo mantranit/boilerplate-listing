@@ -1,0 +1,51 @@
+/* start block-history */
+.block-history{
+  font-size: 16px;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  @include screen(small, false){
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  @include screen(medium, false){
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  td {
+    padding: 5px 10px;
+    @include screen(small) {
+      padding: 10px 20px;
+    }
+  }
+  tr {
+    .year {
+      width: 70px;
+      @include screen(small) {
+        width: 200px;
+      }
+    }
+    .month {
+      width: 56px;
+    }
+    .content {
+      font-size: 0.9em;
+    }
+    &:last-child{
+      td{
+        padding-bottom: 10px;
+        @include screen(small){
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+  p{
+    margin-bottom: 5px;
+  }
+  img{
+    width: 150px;
+  }
+}
+/* end block-history */
