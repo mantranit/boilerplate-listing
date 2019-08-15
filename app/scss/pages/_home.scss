@@ -2,25 +2,6 @@
   max-width: 996px;
   margin: 0 auto;
 }
-ul.products {
-  padding: 20px 0 0;
-  li.product {
-    width: 50%;
-    float: left;
-    margin: 0;
-    padding: 20px;
-    &.product-category {
-      img {
-        margin: 0;
-        border-radius: 0;
-      }
-      .woocommerce-loop-category__title{
-        font-size: 16px;
-        margin-top: 8px;
-      }
-    }
-  }
-}
 
 .storefront-align-wide.page-template-template-fullwidth-php .hentry .entry-content .alignfull,
 .storefront-align-wide.storefront-full-width-content .hentry .entry-content .alignfull{

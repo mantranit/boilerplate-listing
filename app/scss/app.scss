@@ -56,7 +56,8 @@ input[type="search"]{
   }
 }
 
-.site-content{
+.site-content,
+.content-area{
   min-height: calc(100vh - 71px - 77px);
   @include screen(medium){
     min-height: calc(100vh - 83px - 77px);
@@ -171,3 +172,5 @@ h4{
 @import "pages/project";
 @import "pages/contact";
 @import "pages/about";
+@import "pages/product_list";
+@import "pages/product_details";
