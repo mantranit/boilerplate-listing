@@ -4,3 +4,35 @@
   background-position: center 50% !important;
   background-repeat: no-repeat;
 }
+.wpcf7-form{
+  margin: 0 -10px;
+  input,
+  textarea{
+    width: 100%;
+    background: none;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  .wpcf7-not-valid-tip{
+    font-size: 0.875em;
+  }
+}
+.form-name,
+.form-email,
+.form-subject{
+  padding: 10px;
+  @include screen(small){
+    float: left;
+    width: 33.33%;
+  }
+}
+.form-message{
+  clear: both;
+  padding: 10px;
+}
+.form-submit{
+  padding: 10px;
+  input{
+    width: auto;
+  }
+}
