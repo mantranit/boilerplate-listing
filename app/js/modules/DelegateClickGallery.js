@@ -3,9 +3,13 @@ export default class DelegateClickGallery {
     $('.wp-block-gallery figure').click(function(e) {
       e.preventDefault();
 
-      let link = $(this).find('figcaption a');
+      const link = $(this).find('figcaption a');
       if (link.length > 0 && link.attr('href') && link.attr('href') !== '#') {
-        window.location.href = link.attr('href');
+        if (link.attr('target') && link.attr('target') === '_blank') {
+          window.open(link.attr('href'));
+        } else {
+          window.location.href = link.attr('href');
+        }
       }
     });
   }
